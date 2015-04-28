@@ -20,8 +20,5 @@
     "kinda-config": "^0.2.8",
     "kinda-local-repository": "^0.2.0",
     "kinda-remote-repository": "^0.2.0"
-  },
-  "browser": {
-    "kinda-local-repository": false
   }
 }

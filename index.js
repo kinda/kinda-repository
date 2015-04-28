@@ -9,7 +9,7 @@ var Factory = {
     if (!url) url = config.url;
     if (!url) throw new Error('url is missing');
     if (!collections) collections = config.collections;
-    if (!_.isArray(collections)) throw new Error('collections parameter is invalid');
+    if (!(collections instanceof Array)) throw new Error('collections parameter is invalid');
     if (!options) options = config.options;
     var pos = url.indexOf(':');
     if (pos === -1) throw new Error('invalid url');
