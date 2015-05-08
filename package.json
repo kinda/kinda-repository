@@ -18,7 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "kinda-config": "^0.2.8",
-    "kinda-local-repository": "^0.3.0",
-    "kinda-remote-repository": "^0.3.0"
+    "kinda-local-repository": "^0.3.13",
+    "kinda-remote-repository": "^0.3.7"
   }
 }
