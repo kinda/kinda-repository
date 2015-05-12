@@ -17,6 +17,7 @@ var Factory = {
     switch (protocol) {
       case 'mysql':
       case 'websql':
+      case 'sqlite':
         return require('kinda-local-repository').create(name, url, collections, options);
       case 'http':
       case 'https':
