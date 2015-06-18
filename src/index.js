@@ -1,7 +1,14 @@
 'use strict';
 
+let _ = require('lodash');
+
 let Factory = {
-  create(options = {}) {
+  create(application, options) {
+    if (_.isPlainObject(application)) {
+      options = application;
+      application = undefined;
+    }
+    if (!options) options = {};
     let url = options.url;
     if (!url) throw new Error('url is missing');
     let pos = url.indexOf(':');
@@ -11,10 +18,10 @@ let Factory = {
       case 'mysql':
       case 'websql':
       case 'sqlite':
-        return require('kinda-local-repository').create(options);
+        return require('kinda-local-repository').create(application, options);
       case 'http':
       case 'https':
-        return require('kinda-remote-repository').create(options);
+        return require('kinda-remote-repository').create(application, options);
       default:
         throw new Error('unknown protocol');
     }
