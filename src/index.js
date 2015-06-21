@@ -3,10 +3,10 @@
 let _ = require('lodash');
 
 let Factory = {
-  create(application, options) {
-    if (_.isPlainObject(application)) {
-      options = application;
-      application = undefined;
+  create(app, options) {
+    if (_.isPlainObject(app)) {
+      options = app;
+      app = undefined;
     }
     if (!options) options = {};
     let url = options.url;
@@ -18,10 +18,10 @@ let Factory = {
       case 'mysql':
       case 'websql':
       case 'sqlite':
-        return require('kinda-local-repository').create(application, options);
+        return require('kinda-local-repository').create(app, options);
       case 'http':
       case 'https':
-        return require('kinda-remote-repository').create(application, options);
+        return require('kinda-remote-repository').create(app, options);
       default:
         throw new Error('unknown protocol');
     }
