@@ -20,8 +20,8 @@
   "author": "Manuel Vila <mvila@3base.com>",
   "license": "MIT",
   "dependencies": {
-    "kinda-local-repository": "^0.4.0",
-    "kinda-remote-repository": "^0.4.0",
+    "kinda-local-repository": "^0.5.0",
+    "kinda-remote-repository": "^0.5.0",
     "lodash": "^3.9.1"
   },
   "devDependencies": {
